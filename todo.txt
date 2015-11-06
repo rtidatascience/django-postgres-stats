@@ -1,0 +1,6 @@
+Make README.rst
+Make LICENSE
+Make setup.py
+Try installing locally
+Push to GitHub
+Push to PyPi
