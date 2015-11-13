@@ -22,6 +22,17 @@ class DateTrunc(Func):
     * decade
     * century
     * millennium
+
+    Usage example::
+
+        checkin = Checkin.objects.
+            annotate(day=DateTrunc('logged_at', 'day'),
+                     hour=DateTrunc('logged_at', 'hour')).
+            get(pk=1)
+
+        assert checkin.logged_at == datetime(2015, 11, 1, 10, 45, 0)
+        assert checkin.day == datetime(2015, 11, 1, 0, 0, 0)
+        assert checkin.hour == datetime(2015, 11, 1, 10, 0, 0)
     """
 
     function = "DATE_TRUNC"
@@ -63,6 +74,19 @@ class Extract(Func):
     * year
 
     See `the Postgres documentation`_ for details about the subfields.
+
+    Usage example::
+
+        checkin = Checkin.objects.
+            annotate(day=Extract('logged_at', 'day'),
+                     minute=Extract('logged_at', 'minute'),
+                     quarter=Extract('logged_at', 'quarter')).
+            get(pk=1)
+
+        assert checkin.logged_at == datetime(2015, 11, 1, 10, 45, 0)
+        assert checkin.day == 1
+        assert checkin.minute == 45
+        assert checkin.quarter == 4
 
     .. _the Postgres documentation: http://www.postgresql.org/docs/current/static/functions-datetime.html#FUNCTIONS-DATETIME-EXTRACT
 
