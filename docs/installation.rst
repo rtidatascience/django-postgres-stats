@@ -29,4 +29,4 @@ Version control
 
 Django Postgres Power is hosted on GitHub::
 
- https://github.com/rtidatascience/django-postgres-power
+  https://github.com/rtidatascience/django-postgres-power
