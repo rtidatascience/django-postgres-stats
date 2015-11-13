@@ -77,7 +77,7 @@ class Percentile(Aggregate):
     Returns values for each fraction given corresponding to that fraction in
     the ordered expression.
 
-    If ``continuous`` is True (the default), the value will be interpolated
+    If *continuous* is True (the default), the value will be interpolated
     between adjacent values if needed. Otherwise, the value will be the first
     input value whose position in the ordering equals or exceeds the specified
     fraction.
