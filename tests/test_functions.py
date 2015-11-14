@@ -1,7 +1,7 @@
 from django.test import TestCase
 from datetime import datetime
 
-from postgres_power import DateTrunc, Extract
+from postgres_stats import DateTrunc, Extract
 from .models import Checkin
 
 

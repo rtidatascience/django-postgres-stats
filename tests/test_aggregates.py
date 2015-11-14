@@ -2,7 +2,7 @@ from django.contrib.postgres.fields import ArrayField
 from django.db import models
 from django.test import TestCase
 
-from postgres_power import Percentile
+from postgres_stats import Percentile
 from .models import Number
 
 

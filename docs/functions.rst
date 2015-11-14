@@ -6,9 +6,9 @@ Database functions
 
 You can use these like the standard `Django database functions`_.
 
-.. autoclass:: postgres_power.functions.DateTrunc
+.. autoclass:: postgres_stats.functions.DateTrunc
 
-.. autoclass:: postgres_power.functions.Extract
+.. autoclass:: postgres_stats.functions.Extract
 
 
 Aggregations
@@ -16,7 +16,7 @@ Aggregations
 
 You can use these like the standard `Django aggregations`_.
 
-.. autoclass:: postgres_power.aggregates.Percentile
+.. autoclass:: postgres_stats.aggregates.Percentile
 
 
 .. _Django database functions: https://docs.djangoproject.com/en/1.8/ref/models/database-functions/
