@@ -7,7 +7,7 @@ Download and installation
 Installation with pip
 ^^^^^^^^^^^^^^^^^^^^^
 
-You can use pip to install django-postgres-power::
+You can use pip to install django-postgres-stats::
 
   $ pip install django-postgres-stats
 
@@ -27,6 +27,6 @@ setting of your Django project *settings.py* file.::
 Version control
 ---------------
 
-Django Postgres Power is hosted on GitHub::
+Django Postgres Stats is hosted on GitHub::
 
   https://github.com/rtidatascience/django-postgres-stats

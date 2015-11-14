@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 #
-# Django Postgres Power documentation build configuration file, created by
+# Django Postgres Stats documentation build configuration file, created by
 # sphinx-quickstart on Fri Nov 13 14:04:42 2015.
 #
 # This file is execfile()d with the current directory set to its
@@ -51,7 +51,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = 'Django Postgres Power'
+project = 'Django Postgres Stats'
 copyright = '2015, RTI International'
 author = 'RTI Center for Data Science'
 
@@ -205,7 +205,7 @@ html_static_path = ['_static']
 #html_search_scorer = 'scorer.js'
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'DjangoPostgresPowerdoc'
+htmlhelp_basename = 'DjangoPostgresStatsdoc'
 
 # -- Options for LaTeX output ---------------------------------------------
 
@@ -227,7 +227,7 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-  (master_doc, 'DjangoPostgresPower.tex', 'Django Postgres Power Documentation',
+  (master_doc, 'DjangoPostgresStats.tex', 'Django Postgres Stats Documentation',
    'RTI Center for Data Science', 'manual'),
 ]
 
@@ -257,7 +257,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'djangopostgrespower', 'Django Postgres Power Documentation',
+    (master_doc, 'djangopostgresstats', 'Django Postgres Stats Documentation',
      [author], 1)
 ]
 
@@ -271,8 +271,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-  (master_doc, 'DjangoPostgresPower', 'Django Postgres Power Documentation',
-   author, 'DjangoPostgresPower', 'One line description of project.',
+  (master_doc, 'DjangoPostgresStats', 'Django Postgres Stats Documentation',
+   author, 'DjangoPostgresStats', 'One line description of project.',
    'Miscellaneous'),
 ]
 
