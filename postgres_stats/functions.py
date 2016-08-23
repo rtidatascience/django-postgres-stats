@@ -1,4 +1,5 @@
 from django.db.models import Aggregate, Func
+import six
 
 
 class DateTrunc(Func):
@@ -39,7 +40,10 @@ class DateTrunc(Func):
     template = "%(function)s('%(precision)s', %(expressions)s)"
 
     def __init__(self, expression, precision, **extra):
-        super().__init__(expression, precision=precision, **extra)
+        if six.PY2:
+            super(DateTrunc, self).__init__(expression, precision=precision, **extra)
+        else:
+            super().__init__(expression, precision=precision, **extra)
 
 
 class Extract(Func):
@@ -96,6 +100,9 @@ class Extract(Func):
     template = "%(function)s(%(subfield)s FROM %(expressions)s)"
 
     def __init__(self, expression, subfield, **extra):
-        super().__init__(expression, subfield=subfield, **extra)
+        if six.PY2:
+            super(Extract, self).__init__(expression, subfield=subfield, **extra)
+        else:
+            super().__init__(expression, subfield=subfield, **extra)
 
 
