@@ -1,3 +1,4 @@
+import six
 from django.db.models import Aggregate
 
 
@@ -52,4 +53,8 @@ class Percentile(Aggregate):
             extra['function'] = 'PERCENTILE_CONT'
         else:
             extra['function'] = 'PERCENTILE_DISC'
-        super().__init__(expression, percentiles=percentiles, **extra)
+
+        if six.PY2:
+            super(Percentile, self).__init__(expression, percentiles=percentiles, **extra)
+        else:
+            super().__init__(expression, percentiles=percentiles, **extra)
